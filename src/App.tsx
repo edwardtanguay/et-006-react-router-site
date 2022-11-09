@@ -1,6 +1,7 @@
 import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
 
 import './App.scss';
+import { Page404 } from './components/Page404';
 import { PageFrance } from './components/PageFrance';
 import { PageGermany } from './components/PageGermany';
 import { PageSpain } from './components/PageSpain';
@@ -9,7 +10,9 @@ import { PageStart } from './components/PageStart';
 function App() {
 	return (
 		<div className="App">
-			<h1><NavLink to="/">Travel Info Site</NavLink></h1>
+			<h1>
+				<NavLink to="/">Travel Info Site</NavLink>
+			</h1>
 
 			<nav>
 				<NavLink to="germany">Germany</NavLink>
@@ -22,6 +25,7 @@ function App() {
 				<Route path="france/*" element={<PageFrance />} />
 				<Route path="spain" element={<PageSpain />} />
 				<Route path="/" element={<PageStart />} />
+				<Route path="*" element={<Page404 />} />
 			</Routes>
 		</div>
 	);

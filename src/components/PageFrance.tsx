@@ -1,4 +1,6 @@
 import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
+import { Page404 } from './Page404';
+import { PageBlank } from './PageBlank';
 import { PageBordeaux } from './PageBordeaux';
 import { PageParis } from './PageParis';
 
@@ -14,6 +16,8 @@ export const PageFrance = () => {
 			<Routes>
 				<Route path="paris" element={<PageParis />} />
 				<Route path="bordeaux" element={<PageBordeaux />} />
+				<Route path="/" element={<PageBlank />} />
+				<Route path="*" element={<Page404 />} />
 			</Routes>
 		</>
 	);
