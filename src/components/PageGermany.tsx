@@ -7,6 +7,7 @@ export const PageGermany = () => {
 	return (
 		<>
 			<p>Welcome to the Germany page.</p>
+			<p>Today please look at events going on at the <NavLink to="/germany/berlin/mitte/brandenburgGate">Brandenburg Gate</NavLink>.</p>
 
 			<nav>
 				<NavLink to="hamburg">Hamburg</NavLink>
