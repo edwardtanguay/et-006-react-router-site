@@ -4,11 +4,12 @@ import './App.scss';
 import { PageFrance } from './components/PageFrance';
 import { PageGermany } from './components/PageGermany';
 import { PageSpain } from './components/PageSpain';
+import { PageStart } from './components/PageStart';
 
 function App() {
 	return (
 		<div className="App">
-			<h1>Travel Info Site</h1>
+			<h1><NavLink to="/">Travel Info Site</NavLink></h1>
 
 			<nav>
 				<NavLink to="germany">Germany</NavLink>
@@ -20,7 +21,7 @@ function App() {
 				<Route path="germany/*" element={<PageGermany />} />
 				<Route path="france/*" element={<PageFrance />} />
 				<Route path="spain" element={<PageSpain />} />
-				<Route path="/" element={<Navigate to="germany" replace/>}  />
+				<Route path="/" element={<PageStart />} />
 			</Routes>
 		</div>
 	);
