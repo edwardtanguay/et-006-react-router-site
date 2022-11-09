@@ -2,6 +2,9 @@ import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
 import { PageMitte } from './PageMitte';
 import { PageSteglitz } from './PageSteglitz';
 import { PageTiergarten } from './PageTiergarten';
+import { PageBrandenburgGate } from './PageBrandenburgGate';
+import { PageCheckpointCharlie } from './PageCheckpointCharlie';
+import { PageUnterDenLinden } from './PageUnterDenLinden';
 
 export const PageBerlin = () => {
 	return (
@@ -15,7 +18,20 @@ export const PageBerlin = () => {
 			<Routes>
 				<Route path="tiergarten" element={<PageTiergarten />} />
 				<Route path="steglitz" element={<PageSteglitz />} />
-				<Route path="mitte/*" element={<PageMitte />} />
+				<Route path="mitte" element={<PageMitte />}>
+					<Route
+						path="checkpointCharlie"
+						element={<PageCheckpointCharlie />}
+					/>
+					<Route
+						path="brandenburgGate"
+						element={<PageBrandenburgGate />}
+					/>
+					<Route
+						path="unterDenLinden"
+						element={<PageUnterDenLinden />}
+					/>
+				</Route>
 			</Routes>
 		</>
 	);

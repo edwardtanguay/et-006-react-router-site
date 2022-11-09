@@ -14,12 +14,12 @@ export const PageGermany = () => {
 				<NavLink to="hannover">Hannover</NavLink>
 				<NavLink to="berlin">Berlin</NavLink>
 			</nav>
-
 			<Routes>
 				<Route path="hamburg" element={<PageHamburg />} />
 				<Route path="hannover" element={<PageHannover />} />
 				<Route path="berlin/*" element={<PageBerlin />} />
 			</Routes>
+
 		</>
 	);
 };
