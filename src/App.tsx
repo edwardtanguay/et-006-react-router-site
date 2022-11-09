@@ -2,6 +2,7 @@ import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
 
 import './App.scss';
 import { Page404 } from './components/Page404';
+import { PageCity } from './components/PageCity';
 import { PageFrance } from './components/PageFrance';
 import { PageGermany } from './components/PageGermany';
 import { PageSpain } from './components/PageSpain';
@@ -23,7 +24,9 @@ function App() {
 			<Routes>
 				<Route path="germany/*" element={<PageGermany />} />
 				<Route path="france/*" element={<PageFrance />} />
-				<Route path="spain" element={<PageSpain />} />
+				<Route path="spain" element={<PageSpain />}>
+					<Route path=":id" element={<PageCity/>}/>
+				</Route>
 				<Route path="/" element={<PageStart />} />
 				<Route path="*" element={<Page404 />} />
 			</Routes>
