@@ -15,7 +15,7 @@ export const PageBerlin = () => {
 			<Routes>
 				<Route path="tiergarten" element={<PageTiergarten />} />
 				<Route path="steglitz" element={<PageSteglitz />} />
-				<Route path="mitte" element={<PageMitte />} />
+				<Route path="mitte/*" element={<PageMitte />} />
 			</Routes>
 		</>
 	);
