@@ -17,7 +17,7 @@ export const PageGermany = () => {
 			<Routes>
 				<Route path="hamburg" element={<PageHamburg />} />
 				<Route path="hannover" element={<PageHannover />} />
-				<Route path="berlin" element={<PageBerlin />} />
+				<Route path="berlin/*" element={<PageBerlin />} />
 			</Routes>
 		</>
 	);
