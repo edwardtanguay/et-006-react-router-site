@@ -1,4 +1,4 @@
-import { NavLink, Routes, Route } from 'react-router-dom';
+import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
 
 import './App.scss';
 import { PageFrance } from './components/PageFrance';
@@ -20,6 +20,7 @@ function App() {
 				<Route path="germany" element={<PageGermany />} />
 				<Route path="france" element={<PageFrance />} />
 				<Route path="spain" element={<PageSpain />} />
+				<Route path="/" element={<Navigate to="germany" replace/>}  />
 			</Routes>
 		</div>
 	);
